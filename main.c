@@ -79,14 +79,24 @@ void task3(){
 void task4(){
     printf("Aufgabe 4:\n\n");
 
-    int number =123, binary;
+    int number =1234;
+    int binary[32];
+    int index = 0;
 
     printf("Die Dezimalzahl ist: %d\n", number);
-    printf("Die Binaerzahl ist: ");
 
     while(number != 0)  {
-        printf("%d", number % 2);
+        binary[index] = number % 2;
         number = number / 2;
+        index++;
+    }
+
+    printf("Die Binaerzahl ist: ");
+    for (int i = index - 1; i >= 0; i--) {
+        printf("%d", binary[i]);
+        if(i%4 == 0){
+            printf(" ");
+        }
     }
 
     printf("\n\n");
