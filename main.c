@@ -43,9 +43,43 @@ void task2(){
     printf("\n\n");
 }
 
+void task3(){
+    int result;
+    printf("Aufgabe 3:\n\n");
+
+    for(int i = 0; i <=1; i++){
+        printf("%c)\n\n",i == 0? 'a':'b');
+        printf("a # b # c # d #");
+        i == 0 ? printf(" a && b || c && d\n") : printf(" a && (b || c) && d\n");
+        printf("--------------------------------\n");
+
+        for(int a = 0; a <= 1; a++){
+
+            for(int b = 0; b <= 1; b++){
+
+                for(int c = 0; c <= 1; c++){
+
+                    for(int d = 0; d <= 1; d++){
+
+                        if(i == 0){
+                            printf("%d # %d # %d # %d # \t%d\n",a,b,c,d, a&&b||c&&d?1:0);
+                        } else {
+                            printf("%d # %d # %d # %d # \t%d\n",a,b,c,d, a&&(b||c)&&d?1:0);
+                        }
+
+                    }
+                }
+            }
+        }
+
+        printf("\n\n");
+    }
+}
+
 int main()
 {
     task1();
     task2();
+    task3();
     return 0;
 }
