@@ -76,10 +76,27 @@ void task3(){
     }
 }
 
+void task4(){
+    printf("Aufgabe 4:\n\n");
+
+    int number =123, binary;
+
+    printf("Die Dezimalzahl ist: %d\n", number);
+    printf("Die Binaerzahl ist: ");
+
+    while(number != 0)  {
+        printf("%d", number % 2);
+        number = number / 2;
+    }
+
+    printf("\n\n");
+}
+
 int main()
 {
     task1();
     task2();
     task3();
+    task4();
     return 0;
 }
